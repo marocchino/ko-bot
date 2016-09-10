@@ -5,6 +5,10 @@
 const { execSync } = require("child_process")
 
 module.exports = (robot) => {
+  // Command: ping!
+  robot.respond(/ping!/, (res) => {
+    res.send("pong!")
+  })
   // Command: deploy
   robot.respond(/deploy$/, (res) => {
     const commands = [
